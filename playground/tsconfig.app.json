@@ -1,0 +1,23 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "./typed-router.d.ts",
+    "./auto-imports.d.ts",
+    "./components.d.ts",
+    "./env.d.ts",
+    "./src/**/*",
+    "./src/**/*.vue",
+    "../src/**/*"
+  ],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "skipDefaultLibCheck": false,
+    "moduleResolution": "Bundler",
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "@yanhao98/vue-router-helper": ["../src//index.ts"]
+    }
+  }
+}

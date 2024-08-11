@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -w '../src/**/*.ts' -e .ts -x vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "unplugin-vue-markdown": "^0.26.2",
+    "@yanhao98/vue-router-helper": "workspace:*",
+    "vite": "^5.4.0",
+    "vite-plugin-inspect": "^0.8.5"
+  },
+  "dependencies": {
+    "mande": "^2.0.9",
+    "vue": "^3.4.37",
+    "vue-router": "^4.4.3"
+  }
+}
