@@ -2,6 +2,7 @@
   "name": "@yanhao98/vue-router-helper",
   "version": "0.0.1",
   "type": "module",
+  "packageManager": "pnpm@9.7.0",
   "description": "",
   "keywords": [
     "vue-router"
@@ -36,19 +37,22 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "vue-router": "^4.4.0",
-    "nprogress": "^0.2.0"
+    "nprogress": "^0.2.0",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.15",
     "@types/nprogress": "^0.2.3",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^14.12.3",
+    "jsdom": "^24.1.1",
     "nodemon": "^3.1.4",
+    "nprogress": "^0.2.0",
     "prettier": "^3.3.3",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
     "vite": "^5.4.0",
     "vitest": "^2.0.5",
-    "vue-router": "^4.4.3",
-    "nprogress": "^0.2.0"
+    "vue-router": "^4.4.3"
   }
 }
