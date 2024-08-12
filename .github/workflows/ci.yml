@@ -1,3 +1,4 @@
+# https://github.com/posva/unplugin-vue-router/blob/3afe293d8ac5f52b1d818bd044ebb2e1313c8570/.github/workflows/ci.yml
 name: CI
 
 on:
@@ -44,15 +45,16 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      # - name: Tests with coverage
-      #   if: ${{ matrix.os == 'ubuntu-latest' && matrix.node == 'lts/*' }}
-      #   run: pnpm test -- --coverage
+      - name: Tests with coverage
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.node == 'lts/*' }}
+        run: pnpm test -- --coverage
 
       - name: Tests
+        if: ${{ matrix.os != 'ubuntu-latest' || matrix.node != 'lts/*' }}
         run: pnpm test
 
-      # - name: Upload coverage to Codecov
-      #   if: ${{ matrix.os == 'ubuntu-latest' && matrix.node == 'lts/*' }}
-      #   uses: codecov/codecov-action@v4
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload coverage to Codecov
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.node == 'lts/*' }}
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

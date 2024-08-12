@@ -43,6 +43,7 @@
   "devDependencies": {
     "@types/node": "^20.14.15",
     "@types/nprogress": "^0.2.3",
+    "@vitest/coverage-v8": "^2.0.5",
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^14.12.3",
     "jsdom": "^24.1.1",

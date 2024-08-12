@@ -47,7 +47,7 @@ const routes = [
 
 const router = createRouter({
   history: createMemoryHistory(),
-  routes: routes,
+  routes,
 });
 
 test('createLogGuard', async () => {
@@ -66,4 +66,12 @@ test('createLogGuard', async () => {
   await flushPromises();
   expect(wrapper.html()).toContain('Testing Vue Router');
   expect(debugSpy).toHaveBeenCalledTimes(4);
+
+  debugSpy.mockImplementation((...args) => {
+    console.log(...args.map((arg) => String(arg)));
+  });
+  await router.push('');
+  expect(debugSpy).toHaveBeenCalledTimes(5);
+
+  expect(debugSpy.mock.calls[debugSpy.mock.calls.length - 1]?.some((arg) => arg.includes('🚨 failure:'))).toBe(true);
 });
