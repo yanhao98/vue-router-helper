@@ -13,4 +13,6 @@ export function createProgressGuard(router: Router) {
   router.afterEach(() => {
     NProgress.done();
   });
+
+  return NProgress;
 }
