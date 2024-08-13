@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended",
     ":disablePeerDependencies",
+    ":disableDependencyDashboard",
     "group:allNonMajor",
     "regexManagers:dockerfileVersions"
   ],
