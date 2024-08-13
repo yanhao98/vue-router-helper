@@ -105,7 +105,7 @@ export function createStackGuard(router: Router) {
     console.debug(
       diractionEmoji,
       'stack :>> ',
-      stack.map((item, index) => (stackIdx === index ? `🔵 ${item.fullPath}` : item.fullPath))
+      stack.map((item, index) => (stackIdx === index ? `${item.fullPath}📍` : item.fullPath))
       // stack
     );
     console.debug(`%c${'-'.repeat(80)}`, 'color: #409EFF;');
