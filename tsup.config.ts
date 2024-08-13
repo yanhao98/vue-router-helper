@@ -7,6 +7,7 @@ export const commonOptions = {
   external: ['vue-router', 'nprogress'],
   cjsInterop: true,
   splitting: true,
+  sourcemap: true,
 } satisfies Options;
 
 export default defineConfig([
