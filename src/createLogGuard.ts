@@ -23,7 +23,7 @@ export function createLogGuard(router: Router) {
     isAfter: boolean;
   }) {
     console.debug(
-      isAfter ? ' ↗️' : '🚗',
+      isAfter ? '↗️' : '🚗',
       '====================',
       isAfter ? `[ afterEach]` : `[beforeEach]`,
       '[',
